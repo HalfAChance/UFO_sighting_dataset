@@ -1,0 +1,116 @@
+.Timeline1 {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 15px 0;
+    display:flex;
+}
+
+
+.Timeline1::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #006E51;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+
+}
+
+.TimeLine_pannel_right{
+  padding: 15px 30px;
+  position: relative;
+  display:inline-block;
+  width: 49%;
+}
+
+.Container_timeline_right{
+  padding: 15px 30px;
+  position: relative;
+}
+
+.Container_timeline_right::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  left:-10px;
+  background: #ffffff;
+  border: 2px solid #006E51;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.Container_timeline_right::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  top: 50%;
+  left: -8px;
+  background: #006E51;
+  z-index: 1;
+}
+
+.Indice_Timeline1{
+  padding: 15px 30px;
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  color: #006E51;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.Indice_Timeline1::after {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: calc(50% - 21px);
+  left:-23px;
+  background: #ffffff;
+  border: 10px solid #006E51;
+  border-radius: 26px ;
+  z-index: 1;
+}
+
+
+
+.Container_timeline_right_content{
+  padding: 30px 30px 30px 90px;
+  border-radius: 500px 0 0 500px;
+  background: #F6D155;
+  position: relative;
+}
+
+.Container_timeline_right_time{
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 20px);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #006E51;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.Graph_Timeline1{
+  width:49%;
+}
+
+.Sticky_graph_Timeline1{
+	position:sticky;
+	top:0;
+}
+
+.Timeline1_title{
+	text-align: center;
+}

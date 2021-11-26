@@ -1,0 +1,48 @@
+.Title_board{
+	background-color:#212121;
+}
+.Title{
+	text-align:center;
+	color:#F6F6F6;
+}
+.Names{
+	text-align:center;
+	color:#F6F6F6;
+}
+
+
+
+
+
+
+
+.Intro_board{
+	display:flex;
+	background-color:#212121;
+	
+}
+.Intro_text_board{
+	margin:10px 100px;
+}
+
+.Intro_title1{
+	color:#F6F6F6;
+}
+
+.Intro_content1{
+	color:#F6F6F6;
+}
+
+#example_intro1{
+	margin:10px 100px;
+	border: solid #212121;
+}
+
+
+
+
+
+
+
+
+
