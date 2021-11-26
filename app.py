@@ -20,6 +20,7 @@ df = px.data.tips()
 fig = px.pie(df, values='tip', names='day',height=500,width=500)
 
 app = dash.Dash(__name__)
+server = app.server
 
 app.layout = html.Div(children = [
     html.Div(
