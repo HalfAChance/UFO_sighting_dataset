@@ -35,6 +35,8 @@ df_cleaned.sort_values("Time_clean",inplace=True)
 df_cleaned = df_cleaned.reset_index(drop=True)
 df_cleaned.to_csv("data/Cleaned.csv",index=None)
 
+
+
 temp = df_cleaned.groupby(["Year","shape"]).count()["Time_clean"].reset_index()
 temp_ = [temp["Year"].values,temp["shape"].values]
 temp2 = pd.Series(temp["Time_clean"].values, index=temp_)
