@@ -8,17 +8,14 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import plotly.express as px
 from get_RaceBar import get_racebar
-from getshape import get_clean_shape
 
 import psutil
 import os
 
 
-#df_cleaned = pd.read_csv("data/Cleaned_with_continent.csv")
+Shape_ = pd.read_csv("data/ShapesByYear.csv")
 
-#shape_ = get_clean_shape(df_cleaned)
-
-#fig_racebar = get_racebar(shape_)
+fig_racebar = get_racebar(Shape_)
 
 
 intro_example = "An uniderovided pologists' favour unconventional, pseudoscientific hypotheses, some of which go beyond the typical extraterrestrial visitation claims and sometimes form part of new religions."
@@ -51,7 +48,7 @@ app.layout = html.Div(children = [
                 children=[
                     dcc.Graph(
                         id="example_intro1",
-                        figure=fig
+                        figure=fig_racebar
                     )
                 ]
             )
