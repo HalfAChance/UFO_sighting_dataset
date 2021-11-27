@@ -9,10 +9,13 @@ import plotly.graph_objects as go
 import plotly.express as px
 from get_RaceBar import get_racebar
 
+import psutil
+import os
 
-#Shape_ = pd.read_csv("data/ShapesByYear.csv")
 
-#fig_racebar = get_racebar(Shape_)
+Shape_ = pd.read_csv("data/ShapesByYear.csv")
+
+fig_racebar = get_racebar(Shape_)
 
 
 intro_example = "An uniderovided pologists' favour unconventional, pseudoscientific hypotheses, some of which go beyond the typical extraterrestrial visitation claims and sometimes form part of new religions."
@@ -45,7 +48,7 @@ app.layout = html.Div(children = [
                 children=[
                     dcc.Graph(
                         id="example_intro1",
-                        figure=fig
+                        figure=fig_racebar
                     )
                 ]
             )
@@ -563,7 +566,8 @@ app.layout = html.Div(children = [
 
 
 
-])
 
+])
+print(u'当前进程的内存使用：%.4f GB' % (psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024 / 1024) )
 if __name__ == '__main__':
     app.run_server(debug=True)
