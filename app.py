@@ -45,7 +45,7 @@ app.layout = html.Div(children = [
                 children=[
                     dcc.Graph(
                         id="example_intro1",
-                        figure=fig_racebar
+                        figure=fig
                     )
                 ]
             )
