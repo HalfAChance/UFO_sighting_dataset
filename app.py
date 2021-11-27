@@ -12,7 +12,7 @@ from get_RaceBar import get_racebar
 
 Shape_ = pd.read_csv("data/ShapesByYear.csv")
 
-fig_racebar = get_racebar(Shape_)
+#fig_racebar = get_racebar(Shape_)
 
 
 intro_example = "An uniderovided pologists' favour unconventional, pseudoscientific hypotheses, some of which go beyond the typical extraterrestrial visitation claims and sometimes form part of new religions."
