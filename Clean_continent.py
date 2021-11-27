@@ -1,15 +1,6 @@
-from geopy.geocoders import Nominatim
-import pycountry_convert as pc
 import pandas as pd
 import numpy as np
 
-def country_to_continent(country_name):
-    #country_alpha2 = pc.country_name_to_country_alpha2(country_name)
-    if country_name =="other":
-      return "other"
-    country_continent_code = pc.country_alpha2_to_continent_code(country_name)
-    country_continent_name = pc.convert_continent_code_to_continent_name(country_continent_code)
-    return country_continent_name
 
 def get_continent(lat,lon):
   lat = float(lat)
@@ -30,22 +21,6 @@ def get_continent(lat,lon):
     return "Antarctica"
   else:
     return "Other"
-
-geolocator = Nominatim(user_agent="geoapiExercises")
-
-def get_country_name(lat,lon):
-  lat = str(lat)
-  lon = str(lon)
-  location = geolocator.reverse(lat+","+lon)
-  try:
-    add = location.raw['address']
-    res = add.get('country_code')
-  except:
-    print("other")
-    return "other"
-  else:
-    print(res)
-    return res
 
 df = pd.read_csv("data/Cleaned.csv")
 

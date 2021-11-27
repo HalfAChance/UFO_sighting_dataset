@@ -10,7 +10,7 @@ import plotly.express as px
 from get_RaceBar import get_racebar
 
 
-Shape_ = pd.read_csv("data/ShapesByYear.csv")
+#Shape_ = pd.read_csv("data/ShapesByYear.csv")
 
 #fig_racebar = get_racebar(Shape_)
 
