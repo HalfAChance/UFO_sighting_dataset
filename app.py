@@ -8,19 +8,28 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import plotly.express as px
 from get_RaceBar import get_racebar
-
+from Graphes import get_map
+from Graphes import get_pies
+import json
 import psutil
 import os
 
+with open("data/Texts.json","r") as f:
+    content = f.read()
+    texts = json.loads(content)
+    f.close()
 
 Shape_ = pd.read_csv("data/ShapesByYear.csv")
-
 fig_racebar = get_racebar(Shape_)
+
+data = pd.read_csv("data/Cleaned_with_continent.csv")
+fig_map = get_map(data)
+fig_pie_list=get_pies(data)
 
 
 intro_example = "An uniderovided pologists' favour unconventional, pseudoscientific hypotheses, some of which go beyond the typical extraterrestrial visitation claims and sometimes form part of new religions."
 df = px.data.tips()
-fig = px.pie(df, values='tip', names='day',height=500,width=500)
+fig = px.pie(df, values='tip', names='day',height=500,width=500,title="Example graphe")
 
 app = dash.Dash(__name__)
 server = app.server
@@ -38,18 +47,63 @@ app.layout = html.Div(children = [
         children = [
             html.Div(
                 className="Intro_text_board",
-                children = [
-                    html.H3(children="This is Introduction",className="Intro_title1"),
-                    html.P(children=intro_example,className="Intro_content1")
+                children=[
+                    html.H3(children="Introduction", className="Intro_title1"),
+                    html.P(children=texts["Intro"]["1_"], className="Intro_content")
                 ]
             ),
             html.Div(
-                className="Intro_demo1",
+                className="Intro_graphe_board1",
                 children=[
                     dcc.Graph(
-                        id="example_intro1",
+                        id="graphe_intro1",
+                        figure=fig_map
+                    )
+                ]
+            ),
+            html.Div(
+                className="Intro_text_board",
+                children = [
+                    #html.H3(children="This is Introduction",className="Intro_title2"),
+                    html.P(children=texts["Intro"]["2_"],className="Intro_content"),
+                    html.P(children=texts["Intro"]["3_"], className="Intro_content"),
+                    html.P(children=texts["Intro"]["4_"], className="Intro_content")
+                ]
+            ),
+            html.Div(
+                className="Intro_graphe_board2",
+                children=[
+                    dcc.Graph(
+                        id="graphe_intro2",
                         figure=fig_racebar
                     )
+                ]
+            ),
+            html.Div(
+                className="Intro_text_board",
+                children=[
+                    # html.H3(children="This is Introduction",className="Intro_title2"),
+                    html.P(children=texts["Intro"]["5_"], className="Intro_content"),
+                    html.P(children=texts["Intro"]["6_"], className="Intro_content"),
+                    html.P(children=texts["Intro"]["7_"], className="Intro_content")
+                ]
+            ),
+            html.Div(
+                className="End_intro",
+                children=[
+                    html.P(
+                        children="-----------------------------------------------------------------"
+                    ),
+                    html.P(
+                        children="---------------------------------------------------"
+                    ),
+                    html.P(
+                        children="------------------------------------------"
+                    ),
+                    html.P(
+                        children="-",className="End_invisible"
+                    )
+
                 ]
             )
         ]
@@ -74,7 +128,7 @@ app.layout = html.Div(children = [
                                 children=[
                                     dcc.Graph(
                                         id="example_timeline1",
-                                        figure=fig
+                                        figure=fig_pie_list[0]
                                     ),
                                     html.P(
                                         className="explaination_examlpe_timeline1",
@@ -293,7 +347,7 @@ app.layout = html.Div(children = [
                                 children=[
                                     dcc.Graph(
                                         id="example_timeline2",
-                                        figure=fig
+                                        figure=fig_pie_list[1]
                                     ),
                                     html.P(
                                         className="explaination_examlpe_timeline2",
@@ -328,7 +382,7 @@ app.layout = html.Div(children = [
                                 children=[
                                     dcc.Graph(
                                         id="example_timeline3",
-                                        figure=fig
+                                        figure=fig_pie_list[2]
                                     ),
                                     html.P(
                                         className="explaination_examlpe_timeline3",
@@ -547,7 +601,7 @@ app.layout = html.Div(children = [
                                 children=[
                                     dcc.Graph(
                                         id="example_timeline4",
-                                        figure=fig
+                                        figure=fig_pie_list[3]
                                     ),
                                     html.P(
                                         className="explaination_examlpe_timeline4",

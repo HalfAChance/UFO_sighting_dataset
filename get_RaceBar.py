@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
+import plotly.express as px
 
 
 
@@ -80,8 +81,8 @@ def get_racebar(Shape_):
 
     trace0.append(trace)
 
-    layout1 = go.Layout(width=700, height=500,
-                        title="<b>Shapes of witeness</b>",
+    layout1 = go.Layout(width=800, height=500,
+                        title="<b>The evolution of the shapes of UFO in the comment of sighting</b>",
                         hovermode="closest",
                         xaxis=dict(range=[0, 1]),
                         updatemenus=[dict(type="buttons",
