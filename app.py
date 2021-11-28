@@ -14,7 +14,7 @@ import json
 import psutil
 import os
 
-with open("data/Texts.json","r") as f:
+with open("data/Texts.json","rb") as f:
     content = f.read()
     texts = json.loads(content)
     f.close()
@@ -132,7 +132,11 @@ app.layout = html.Div(children = [
                                     ),
                                     html.P(
                                         className="explaination_examlpe_timeline1",
-                                        children=" Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium."
+                                        children=texts["Timeline1"]["graph_left"]["1_"]
+                                    ),
+                                    html.P(
+                                        className="explaination_examlpe_timeline1",
+                                        children=texts["Timeline1"]["graph_left"]["2_"]
                                     )
                                 ]
                             )
@@ -143,7 +147,7 @@ app.layout = html.Div(children = [
                         children=[
                             html.Div(
                                 className="Indice_Timeline1",
-                                children="Start Year"
+                                children="1906: Where the data set begin...."
                             ),
                             html.Div(
                                 className="Container_timeline_right",
@@ -151,16 +155,16 @@ app.layout = html.Div(children = [
                                     html.Div(
                                         className="Container_timeline_right_content",
                                         children=[
-                                            html.H2(children="This is the title of event1",
+                                            html.H2(children=texts["Timeline1"]["(1902)"]["0_"],
                                                     className="Timeline1_event1_title"),
                                             html.P(
-                                                children=" Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.",
+                                                children=texts["Timeline1"]["(1902)"]["1_"],
                                                 className="Timeline1_event1_content")
                                         ]
                                     ),
                                     html.Div(
                                         className="Container_timeline_right_time",
-                                        children="Year 1"
+                                        children="1902"
                                     )
 
                                 ]
@@ -171,16 +175,16 @@ app.layout = html.Div(children = [
                                     html.Div(
                                         className="Container_timeline_right_content",
                                         children=[
-                                            html.H2(children="This is the title of event2",
+                                            html.H2(children=texts["Timeline1"]["(1922)"]["0_"],
                                                     className="Timeline1_event2_title"),
                                             html.P(
-                                                children=" Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.",
+                                                children=texts["Timeline1"]["(1922)"]["1_"],
                                                 className="Timeline1_event2_content")
                                         ]
                                     ),
                                     html.Div(
                                         className="Container_timeline_right_time",
-                                        children="Year 2"
+                                        children="1922"
                                     )
 
                                 ]
@@ -226,7 +230,7 @@ app.layout = html.Div(children = [
                             ),
                             html.Div(
                                 className="Indice_Timeline1",
-                                children="End Year"
+                                children="1938"
                             ),
                         ]
                     )
@@ -252,7 +256,7 @@ app.layout = html.Div(children = [
                         children=[
                             html.Div(
                                 className="Indice_Timeline2",
-                                children="Start Year"
+                                children="1938"
                             ),
                             html.Div(
                                 className="Container_timeline_left",
@@ -263,13 +267,13 @@ app.layout = html.Div(children = [
                                             html.H2(children="This is the title of event1",
                                                     className="Timeline2_event1_title"),
                                             html.P(
-                                                children=" Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.",
+                                                children=texts["Timeline2"]["(1951)"]["1_"],
                                                 className="Timeline2_event1_content")
                                         ]
                                     ),
                                     html.Div(
                                         className="Container_timeline_left_time",
-                                        children="Year 1"
+                                        children="1951"
                                     )
 
                                 ]
@@ -280,16 +284,16 @@ app.layout = html.Div(children = [
                                     html.Div(
                                         className="Container_timeline_left_content",
                                         children=[
-                                            html.H2(children="This is the title of event2",
+                                            html.H2(children=texts["Timeline2"]["(1953)"]["0_"],
                                                     className="Timeline2_event2_title"),
                                             html.P(
-                                                children=" Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.",
+                                                children=texts["Timeline2"]["(1953)"]["1_"],
                                                 className="Timeline2_event2_content")
                                         ]
                                     ),
                                     html.Div(
                                         className="Container_timeline_left_time",
-                                        children="Year 2"
+                                        children="1953"
                                     )
 
                                 ]
@@ -300,16 +304,16 @@ app.layout = html.Div(children = [
                                     html.Div(
                                         className="Container_timeline_left_content",
                                         children=[
-                                            html.H2(children="This is the title of event3",
+                                            html.H2(children=texts["Timeline2"]["(1958)"]["0_"],
                                                     className="Timeline2_event3_title"),
                                             html.P(
-                                                children=" Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.",
+                                                children=texts["Timeline2"]["(1958)"]["1_"],
                                                 className="Timeline2_event3_content")
                                         ]
                                     ),
                                     html.Div(
                                         className="Container_timeline_left_time",
-                                        children="Year 3"
+                                        children="1958"
                                     )
 
                                 ]
@@ -335,7 +339,7 @@ app.layout = html.Div(children = [
                             ),
                             html.Div(
                                 className="Indice_Timeline2",
-                                children="End Year"
+                                children="1960"
                             ),
                         ]
                     ),
@@ -351,7 +355,7 @@ app.layout = html.Div(children = [
                                     ),
                                     html.P(
                                         className="explaination_examlpe_timeline2",
-                                        children=" Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium."
+                                        children=texts["Timeline2"]["graph_on_the_right"]["1_"]
                                     )
                                 ]
                             )
@@ -386,7 +390,7 @@ app.layout = html.Div(children = [
                                     ),
                                     html.P(
                                         className="explaination_examlpe_timeline3",
-                                        children=" Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium."
+                                        children=texts["Timeline3"]["graph_on_the_left"]["1_"]
                                     )
                                 ]
                             )
@@ -397,7 +401,7 @@ app.layout = html.Div(children = [
                         children=[
                             html.Div(
                                 className="Indice_Timeline3",
-                                children="Start Year"
+                                children="1960"
                             ),
                             html.Div(
                                 className="Container_timeline_right",
@@ -405,16 +409,16 @@ app.layout = html.Div(children = [
                                     html.Div(
                                         className="Container_timeline_right_content",
                                         children=[
-                                            html.H2(children="This is the title of event1",
+                                            html.H2(children=texts["Timeline3"]["(1968)"]["0_"],
                                                     className="Timeline3_event1_title"),
                                             html.P(
-                                                children=" Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.",
+                                                children=texts["Timeline3"]["(1968)"]["1_"],
                                                 className="Timeline3_event1_content")
                                         ]
                                     ),
                                     html.Div(
                                         className="Container_timeline_right_time",
-                                        children="Year 1"
+                                        children="1968"
                                     )
 
                                 ]
@@ -425,16 +429,16 @@ app.layout = html.Div(children = [
                                     html.Div(
                                         className="Container_timeline_right_content",
                                         children=[
-                                            html.H2(children="This is the title of event2",
+                                            html.H2(children=texts["Timeline3"]["(1977)"]["0_"],
                                                     className="Timeline3_event2_title"),
                                             html.P(
-                                                children=" Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.",
+                                                children=texts["Timeline3"]["(1977)"]["1_"],
                                                 className="Timeline3_event2_content")
                                         ]
                                     ),
                                     html.Div(
                                         className="Container_timeline_right_time",
-                                        children="Year 2"
+                                        children="1977"
                                     )
 
                                 ]
@@ -445,16 +449,16 @@ app.layout = html.Div(children = [
                                     html.Div(
                                         className="Container_timeline_right_content",
                                         children=[
-                                            html.H2(children="This is the title of event3",
+                                            html.H2(children=texts["Timeline3"]["(1977)_"]["0_"],
                                                     className="Timeline3_event3_title"),
                                             html.P(
-                                                children=" Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.",
+                                                children=texts["Timeline3"]["(1977)_"]["1_"],
                                                 className="Timeline3_event3_content")
                                         ]
                                     ),
                                     html.Div(
                                         className="Container_timeline_right_time",
-                                        children="Year 3"
+                                        children="1977"
                                     )
 
                                 ]
@@ -465,22 +469,22 @@ app.layout = html.Div(children = [
                                     html.Div(
                                         className="Container_timeline_right_content",
                                         children=[
-                                            html.H2(children="This is the title of event4",
+                                            html.H2(children=texts["Timeline3"]["(1986)"]["0_"],
                                                     className="Timeline3_event4_title"),
                                             html.P(
-                                                children=" Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.",
+                                                children=texts["Timeline3"]["(1986)"]["1_"],
                                                 className="Timeline3_event4_content")
                                         ]
                                     ),
                                     html.Div(
                                         className="Container_timeline_right_time",
-                                        children="Year 4"
+                                        children="1986"
                                     )
                                 ]
                             ),
                             html.Div(
                                 className="Indice_Timeline3",
-                                children="End Year"
+                                children="1996"
                             ),
                         ]
                     )
@@ -506,7 +510,7 @@ app.layout = html.Div(children = [
                         children=[
                             html.Div(
                                 className="Indice_Timeline4",
-                                children="Start Year"
+                                children="1996"
                             ),
                             html.Div(
                                 className="Container_timeline_left",
@@ -514,16 +518,16 @@ app.layout = html.Div(children = [
                                     html.Div(
                                         className="Container_timeline_left_content",
                                         children=[
-                                            html.H2(children="This is the title of event1",
+                                            html.H2(children=texts["Timeline4"]["(1997)"]["0_"],
                                                     className="Timeline4_event1_title"),
                                             html.P(
-                                                children=" Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.",
+                                                children=texts["Timeline4"]["(1997)"]["1_"],
                                                 className="Timeline4_event1_content")
                                         ]
                                     ),
                                     html.Div(
                                         className="Container_timeline_left_time",
-                                        children="Year 1"
+                                        children="1997"
                                     )
 
                                 ]
@@ -534,16 +538,16 @@ app.layout = html.Div(children = [
                                     html.Div(
                                         className="Container_timeline_left_content",
                                         children=[
-                                            html.H2(children="This is the title of event2",
+                                            html.H2(children=texts["Timeline4"]["(2005)"]["0_"],
                                                     className="Timeline4_event2_title"),
                                             html.P(
-                                                children=" Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.",
+                                                children=texts["Timeline4"]["(2005)"]["1_"],
                                                 className="Timeline4_event2_content")
                                         ]
                                     ),
                                     html.Div(
                                         className="Container_timeline_left_time",
-                                        children="Year 2"
+                                        children="2005"
                                     )
 
                                 ]
@@ -554,16 +558,16 @@ app.layout = html.Div(children = [
                                     html.Div(
                                         className="Container_timeline_left_content",
                                         children=[
-                                            html.H2(children="This is the title of event3",
+                                            html.H2(children=texts["Timeline4"]["(2011)"]["0_"],
                                                     className="Timeline4_event3_title"),
                                             html.P(
-                                                children=" Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.",
+                                                children=texts["Timeline4"]["(2011)"]["1_"],
                                                 className="Timeline4_event3_content")
                                         ]
                                     ),
                                     html.Div(
                                         className="Container_timeline_left_time",
-                                        children="Year 3"
+                                        children="2011"
                                     )
 
                                 ]
@@ -574,16 +578,16 @@ app.layout = html.Div(children = [
                                     html.Div(
                                         className="Container_timeline_left_content",
                                         children=[
-                                            html.H2(children="This is the title of event4",
+                                            html.H2(children=texts["Timeline4"]["(2014)"]["0_"],
                                                     className="Timeline4_event4_title"),
                                             html.P(
-                                                children=" Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.",
+                                                children=texts["Timeline4"]["(2014)"]["1_"],
                                                 className="Timeline4_event4_content")
                                         ]
                                     ),
                                     html.Div(
                                         className="Container_timeline_left_time",
-                                        children="Year 4"
+                                        children="2014"
                                     )
                                 ]
                             ),
@@ -605,7 +609,7 @@ app.layout = html.Div(children = [
                                     ),
                                     html.P(
                                         className="explaination_examlpe_timeline4",
-                                        children=" Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium."
+                                        children=texts["Timeline4"]["graph_on_the_right"]["1_"]
                                     )
                                 ]
                             )

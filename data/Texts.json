@@ -7,5 +7,130 @@
 		"5_":"As you can see on this graph. The shape of each UFO varies a lot according to the time. One could therefore at first sight think that there is a parameter which makes people's vision vary.",
 		"6_":"At the end of this work, we are going to look at how the cinematographic culture of science fiction has impacted the vision of people in the world of UFOs.",
 		"7_":"To do so, we will go through all these eras and present you with the key films that have allowed for impactful changes in the image of UFOs. And this from the beginning of the 1900's until today."
+	},
+
+
+
+	"Timeline1":{
+		"graph_left":{
+			"1_":"We can observe a tendency to round oval and cigar shapes. Particularly in novels and adaptations related to airships and the first tests of aircraft of the time. Which are rather round and oval.",
+			"2_":"On the other hand, these adaptations from the beginning of the century take the shape of a bullet as an example for UFOs. From the side this shape is very similar to a cigar, rather elongated and square. And on the other hand seen from the side this shape is a kind of disc."
+		  
+		},
+
+		"(1902)":{
+			"0_":"- A Trip to the Moon",
+			"1_":"First adaptation of books into “films”. With UFO ideologies ressembling as bullets. (Cigar form from face, and round from sides)"
+	  
+		},
+
+		"(1922)":{
+			"0_":"- Himmelskibet",
+			"1_":"Another adaptation of flying organic UFO’s. Similar as big insects. Oval form."
+		
+		}
+	},
+
+
+
+
+	"Timeline2":{
+		"graph_on_the_right":{
+			"1_":"We can see in particular through the graph. That in this period there is a domination of the round shape thanks to this image of the saucer which comes from the cinema. Which has totally spread in people's unconscious. The same goes for oval shapes and light which are once again assimilated to speed or to the appearance of unknown objects in the films. "
+		  
+		},
+
+		"(1951)":{
+			"0_":"- The Day the Earth Stood Still",
+			"1_":"Marks in history the first film categorized as a science fiction film. . It is this film, very popular at the time, which directly marks the spirits with this form of flying saucer as a vessel of aliens. This form is very inspired by the Fribeys. Thereafter a very strong democratization of this shape of saucer in the industry of the cinema settles until the years 1960 approximately."
+		  
+		},
+
+		"(1953)":{
+			"0_":"- Abbott and Costello Go to Mars",
+			"1_":"More and more movies use this saucer shape to describe a UFO. This round shape seen from below and oval shape seen from the side starts to become part of people's vision of UFOs."
+		  
+		},
+
+		"(1958)":{
+			"0_":"- Attack of the 50 Foot Woman",
+			"1_":"Another very impactful film in its time because first use of light as a UFO. Very strong light of round form. "
+		  
+		}
+	},
+
+
+
+
+
+
+
+	"Timeline3":{
+		"graph_on_the_left":{
+			"1_":"This period will mark a major change in the vision of UFOs by people. Notably with the appearance of the first Star Wars. For more than 30 years now, this round shape of saucer has been fading away in the cinema and is out of fashion. The movies, especially with more important means, are abandoning the round shape only to build more complex spaceships."
+		  
+		},
+
+
+		"(1968)":{
+			"0_":"- 2001: A Space Odyssey",
+			"1_":" With a ship on several floors with large radius."
+		  
+		},
+
+		"(1977)":{
+			"0_":"- Star Wars",
+			"1_":". Which will revolutionize the image of UFOs and spaceships. With a new shape much more triangular and square. Very pointed and elongated and very aggressive. These ships look like military tanks from space."
+		  
+		},
+
+		"(1977)_":{
+			"0_":"- Close Encounters of the Third Kind",
+			"1_":"Many films use this light in science fiction as a model of the unknown, especially for UFOs."
+		  
+		},
+
+		"(1986)":{
+			"0_":"- Critters",
+			"1_":"Heritage of starwars. Many ships more triangle and rectangular."
+		  
+		}
+	},
+
+
+
+
+
+
+	"Timeline4":{
+		"graph_on_the_right":{
+			"1_":"This is the most revolutionary time for this work. With the arrival of the internet and the development of computer technology, many changes have taken place since the year 2000. This is also the reason why we notice a very important increase in the number of census from people. For the film industry this era is a return to the roots. Many movies are taking the shape of the early 1900's with this flying saucer to represent the UFO. This one is still very appreciated by the public but nowadays very modernized. In particular with a lot of light effects. "
+		  
+		},
+
+
+		"(1997)":{
+			"0_":"- Men in Black",
+			"1_":"A comic movie about aliens from all kinds of planets. Lots of UFO appearances. With this famous saucer full of light"
+		  
+		},
+
+		"(2005)":{
+			"0_":"- Star Wars Episode III: Revenge of the Sith",
+			"1_":"again which consolidates the image of triangles/rectangles very elongated and pointed. "
+		  
+		},
+
+		"(2011)":{
+			"0_":"- Paul",
+			"1_":"Very cliché comedy film. The saucer is present and the lights are very Abundant"
+		  
+		},
+
+		"(2014)":{
+			"0_":"- Guardians of the Galaxy",
+			"1_":"lot of lasers , lights speed, spaceship much more rectangle still always flying."
+		  
+		}
 	}
 }
