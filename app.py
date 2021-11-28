@@ -264,7 +264,7 @@ app.layout = html.Div(children = [
                                     html.Div(
                                         className="Container_timeline_left_content",
                                         children=[
-                                            html.H2(children="This is the title of event1",
+                                            html.H2(children=texts["Timeline2"]["(1951)"]["0_"],
                                                     className="Timeline2_event1_title"),
                                             html.P(
                                                 children=texts["Timeline2"]["(1951)"]["1_"],
