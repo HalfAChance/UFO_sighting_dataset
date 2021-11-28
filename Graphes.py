@@ -23,10 +23,14 @@ def find_percentage(df,notfirst=False):
     return df
 
 def get_map(df):
+    df["Observed time"] = df["Hour"].where(df["Hour"].between(8, 19), "Observed in night")
+    df["Observed time"] = df["Observed time"].mask(df["Observed time"] != "Observed in night", "Observed in day")
     fig = px.scatter_mapbox(df, lat="latitude", lon="longitude ",hover_name="city",hover_data=["Time_clean","latitude","longitude ","shape"]
-                            ,color_discrete_sequence=["#ff7f0e"],width=800,height=500,zoom=1,center={"lat" : 35.74,"lon" : -39.46})
+                            ,color="Observed time",color_discrete_sequence=["#F3C623","#10375C"],zoom=1,center={"lat" : 35.74,"lon" : -39.46})
     fig.update_layout(mapbox_style="open-street-map")
-    fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
+    fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0}
+                      ,title={"text":"<b>UFO sightings from 1906 to 2014</b>","xanchor":"center","yanchor":"top","x":0.5,"y":0.9}
+                      ,height=500,width=800,legend = dict(x=0,y=0.2,traceorder="normal"))
     return fig
 
 def get_pies(df):

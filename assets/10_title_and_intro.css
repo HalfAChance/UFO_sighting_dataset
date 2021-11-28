@@ -48,16 +48,6 @@
 	display:block;
 }
 
-.Intro_graphe_board1::before{
-	content:"The Sights of UFO from 1906 to 2014";
-	color:#000000;
-	position:relative;
-	top:45px;
-	left:25%;
-	font-size: 25px;
-	z-index:1;
-	
-}
 
 
 .Intro_graphe_board2{
