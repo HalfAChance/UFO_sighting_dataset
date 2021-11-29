@@ -161,7 +161,7 @@ app.layout = html.Div(children = [
                                     ),
                                     html.Div(
                                         className="Container_timeline_right_time",
-                                        children="Year 3"
+                                        children="1898"
                                     )
 
                                 ]
@@ -215,7 +215,7 @@ app.layout = html.Div(children = [
                                     ),
                                     html.Div(
                                         className="Container_timeline_right_time",
-                                        children="Year 4"
+                                        children="1910"
                                     )
                                 ]
                             ),
