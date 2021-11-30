@@ -44,7 +44,7 @@ app.layout = html.Div(children = [
             html.Div(
                 className="Intro_text_board",
                 children=[
-                    html.H3(children="Introduction", className="Intro_title1"),
+                    html.H3(children="-----------------------------------------------------------------", className="Intro_title1"),
                     html.P(children=texts["Intro"]["1_"], className="Intro_content")
                 ]
             ),
@@ -63,6 +63,7 @@ app.layout = html.Div(children = [
                     #html.H3(children="This is Introduction",className="Intro_title2"),
                     html.P(children=texts["Intro"]["2_"],className="Intro_content"),
                     html.P(children=texts["Intro"]["3_"], className="Intro_content"),
+                    html.H3(children="-----------------------------------------------------------------", className="Intro_title1"),
                     html.P(children=texts["Intro"]["4_"], className="Intro_content")
                 ]
             ),
@@ -114,6 +115,18 @@ app.layout = html.Div(children = [
                 ]
             ),
             html.Div(
+                className="Period_Intro1",
+                children=[
+                    html.H3(children="-----------------------------------------------------------------", className="Intro_title"),
+                    html.P(children=texts["Classic_SF"]["0_"], className="Period_intro_content"),
+                    html.P(children=texts["Classic_SF"]["1_"], className="Period_intro_content"),
+                    html.P(children=texts["Classic_SF"]["2_"], className="Period_intro_content"),
+                    html.P(children=texts["Classic_SF"]["3_"], className="Period_intro_content"),
+                    html.H3(children="-----------------------------------------------------------------",
+                            className="Intro_title"),
+                ]
+            ),
+            html.Div(
                 className="Timeline1",
                 children=[
                     html.Div(
@@ -127,13 +140,9 @@ app.layout = html.Div(children = [
                                         figure=fig_pie_list[0]
                                     ),
                                     html.P(
-                                        className="explaination_examlpe_timeline1",
-                                        children=texts["Timeline1"]["graph_left"]["1_"]
+                                        className="explaination_examlpe_timeline",
+                                        children=[texts["Timeline1"]["graph_left"]["1_"],html.Br(),html.Br(),texts["Timeline1"]["graph_left"]["2_"]]
                                     ),
-                                    html.P(
-                                        className="explaination_examlpe_timeline1",
-                                        children=texts["Timeline1"]["graph_left"]["2_"]
-                                    )
                                 ]
                             )
                         ]
@@ -153,10 +162,10 @@ app.layout = html.Div(children = [
                                                 width="150px"
                                             ),
                                             html.H2(children=texts["Timeline1"]["(1898)"]["0_"],
-                                                    className="Timeline1_event3_title"),
+                                                    className="Timeline_event_title"),
                                             html.P(
                                                 children=texts["Timeline1"]["(1898)"]["1_"],
-                                                className="Timeline1_event3_content")
+                                                className="Timeline_event_content")
                                         ]
                                     ),
                                     html.Div(
@@ -182,10 +191,10 @@ app.layout = html.Div(children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline1"]["(1902)"]["0_"],
-                                                    className="Timeline1_event1_title"),
+                                                    className="Timeline_event_title"),
                                             html.P(
                                                 children=texts["Timeline1"]["(1902)"]["1_"],
-                                                className="Timeline1_event1_content")
+                                                className="Timeline_event_content")
                                         ]
                                     ),
                                     html.Div(
@@ -207,10 +216,10 @@ app.layout = html.Div(children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline1"]["(1910)"]["0_"],
-                                                    className="Timeline1_event4_title"),
+                                                    className="Timeline_event_title"),
                                             html.P(
                                                 children=texts["Timeline1"]["(1910)"]["1_"],
-                                                className="Timeline1_event4_content")
+                                                className="Timeline_event_content")
                                         ]
                                     ),
                                     html.Div(
@@ -231,10 +240,10 @@ app.layout = html.Div(children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline1"]["(1922)"]["0_"],
-                                                    className="Timeline1_event2_title"),
+                                                    className="Timeline_event_title"),
                                             html.P(
                                                 children=texts["Timeline1"]["(1922)"]["1_"],
-                                                className="Timeline1_event2_content")
+                                                className="Timeline_event_content")
                                         ]
                                     ),
                                     html.Div(
@@ -265,6 +274,18 @@ app.layout = html.Div(children = [
                 ]
             ),
             html.Div(
+                className="Period_Intro2",
+                children=[
+                    html.H3(children="-----------------------------------------------------------------",
+                            className="Intro_title"),
+                    html.P(children=texts["Golden_age"]["0_"], className="Period_intro_content"),
+                    html.P(children=texts["Golden_age"]["1_"], className="Period_intro_content"),
+                    html.P(children=texts["Golden_age"]["2_"], className="Period_intro_content"),
+                    html.H3(children="-----------------------------------------------------------------",
+                            className="Intro_title"),
+                ]
+            ),
+            html.Div(
                 className="Timeline2",
                 children=[
                     html.Div(
@@ -286,10 +307,10 @@ app.layout = html.Div(children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline2"]["(1951)"]["0_"],
-                                                    className="Timeline2_event1_title"),
+                                                    className="Timeline_event_title"),
                                             html.P(
                                                 children=texts["Timeline2"]["(1951)"]["1_"],
-                                                className="Timeline2_event1_content")
+                                                className="Timeline_event_content")
                                         ]
                                     ),
                                     html.Div(
@@ -311,10 +332,10 @@ app.layout = html.Div(children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline2"]["(1953)"]["0_"],
-                                                    className="Timeline2_event2_title"),
+                                                    className="Timeline_event_title"),
                                             html.P(
                                                 children=texts["Timeline2"]["(1953)"]["1_"],
-                                                className="Timeline2_event2_content")
+                                                className="Timeline_event_content")
                                         ]
                                     ),
                                     html.Div(
@@ -336,10 +357,10 @@ app.layout = html.Div(children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline2"]["(1958)"]["0_"],
-                                                    className="Timeline2_event3_title"),
+                                                    className="Timeline_event_title"),
                                             html.P(
                                                 children=texts["Timeline2"]["(1958)"]["1_"],
-                                                className="Timeline2_event3_content")
+                                                className="Timeline_event_content")
                                         ]
                                     ),
                                     html.Div(
@@ -366,7 +387,7 @@ app.layout = html.Div(children = [
                                         figure=fig_pie_list[1]
                                     ),
                                     html.P(
-                                        className="explaination_examlpe_timeline2",
+                                        className="explaination_examlpe_timeline",
                                         children=texts["Timeline2"]["graph_on_the_right"]["1_"]
                                     )
                                 ]
@@ -388,6 +409,18 @@ app.layout = html.Div(children = [
                 ]
             ),
             html.Div(
+                className="Period_Intro3",
+                children=[
+                    html.H3(children="-----------------------------------------------------------------",
+                            className="Intro_title"),
+                    html.P(children=texts["New_wave"]["0_"], className="Period_intro_content"),
+                    html.P(children=texts["New_wave"]["1_"], className="Period_intro_content"),
+                    html.P(children=texts["New_wave"]["2_"], className="Period_intro_content"),
+                    html.H3(children="-----------------------------------------------------------------",
+                            className="Intro_title"),
+                ]
+            ),
+            html.Div(
                 className="Timeline3",
                 children=[
                     html.Div(
@@ -401,7 +434,7 @@ app.layout = html.Div(children = [
                                         figure=fig_pie_list[2]
                                     ),
                                     html.P(
-                                        className="explaination_examlpe_timeline3",
+                                        className="explaination_examlpe_timeline",
                                         children=texts["Timeline3"]["graph_on_the_left"]["1_"]
                                     )
                                 ]
@@ -427,10 +460,10 @@ app.layout = html.Div(children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline3"]["(1968)"]["0_"],
-                                                    className="Timeline3_event1_title"),
+                                                    className="Timeline_event_title"),
                                             html.P(
                                                 children=texts["Timeline3"]["(1968)"]["1_"],
-                                                className="Timeline3_event1_content")
+                                                className="Timeline_event_content")
                                         ]
                                     ),
                                     html.Div(
@@ -452,10 +485,10 @@ app.layout = html.Div(children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline3"]["(1977)"]["0_"],
-                                                    className="Timeline3_event2_title"),
+                                                    className="Timeline_event_title"),
                                             html.P(
                                                 children=texts["Timeline3"]["(1977)"]["1_"],
-                                                className="Timeline3_event2_content")
+                                                className="Timeline_event_content")
                                         ]
                                     ),
                                     html.Div(
@@ -477,10 +510,10 @@ app.layout = html.Div(children = [
                                                 width="150px"
                                             ),
                                             html.H2(children=texts["Timeline3"]["(1977)_"]["0_"],
-                                                    className="Timeline3_event3_title"),
+                                                    className="Timeline_event_title"),
                                             html.P(
                                                 children=texts["Timeline3"]["(1977)_"]["1_"],
-                                                className="Timeline3_event3_content")
+                                                className="Timeline_event_content")
                                         ]
                                     ),
                                     html.Div(
@@ -502,10 +535,10 @@ app.layout = html.Div(children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline3"]["(1986)"]["0_"],
-                                                    className="Timeline3_event4_title"),
+                                                    className="Timeline_event_title"),
                                             html.P(
                                                 children=texts["Timeline3"]["(1986)"]["1_"],
-                                                className="Timeline3_event4_content")
+                                                className="Timeline_event_content")
                                         ]
                                     ),
                                     html.Div(
@@ -535,6 +568,18 @@ app.layout = html.Div(children = [
                 ]
             ),
             html.Div(
+                className="Period_Intro4",
+                children=[
+                    html.H3(children="-----------------------------------------------------------------",
+                            className="Intro_title"),
+                    html.P(children=texts["Modern_age"]["0_"], className="Period_intro_content"),
+                    html.P(children=texts["Modern_age"]["1_"], className="Period_intro_content"),
+                    html.P(children=texts["Modern_age"]["2_"], className="Period_intro_content"),
+                    html.H3(children="-----------------------------------------------------------------",
+                            className="Intro_title"),
+                ]
+            ),
+            html.Div(
                 className="Timeline4",
                 children=[
                     html.Div(
@@ -556,10 +601,10 @@ app.layout = html.Div(children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline4"]["(1997)"]["0_"],
-                                                    className="Timeline4_event1_title"),
+                                                    className="Timeline_event_title"),
                                             html.P(
                                                 children=texts["Timeline4"]["(1997)"]["1_"],
-                                                className="Timeline4_event1_content")
+                                                className="Timeline_event_content")
                                         ]
                                     ),
                                     html.Div(
@@ -581,10 +626,10 @@ app.layout = html.Div(children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline4"]["(2005)"]["0_"],
-                                                    className="Timeline4_event2_title"),
+                                                    className="Timeline_event_title"),
                                             html.P(
                                                 children=texts["Timeline4"]["(2005)"]["1_"],
-                                                className="Timeline4_event2_content")
+                                                className="Timeline_event_content")
                                         ]
                                     ),
                                     html.Div(
@@ -606,10 +651,10 @@ app.layout = html.Div(children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline4"]["(2011)"]["0_"],
-                                                    className="Timeline4_event3_title"),
+                                                    className="Timeline_event_title"),
                                             html.P(
                                                 children=texts["Timeline4"]["(2011)"]["1_"],
-                                                className="Timeline4_event3_content")
+                                                className="Timeline_event_content")
                                         ]
                                     ),
                                     html.Div(
@@ -631,10 +676,10 @@ app.layout = html.Div(children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline4"]["(2014)"]["0_"],
-                                                    className="Timeline4_event4_title"),
+                                                    className="Timeline_event_title"),
                                             html.P(
                                                 children=texts["Timeline4"]["(2014)"]["1_"],
-                                                className="Timeline4_event4_content")
+                                                className="Timeline_event_content")
                                         ]
                                     ),
                                     html.Div(
@@ -645,7 +690,7 @@ app.layout = html.Div(children = [
                             ),
                             html.Div(
                                 className="Indice_Timeline4",
-                                children="End Year"
+                                children="Now"
                             ),
                         ]
                     ),
@@ -660,7 +705,7 @@ app.layout = html.Div(children = [
                                         figure=fig_pie_list[3]
                                     ),
                                     html.P(
-                                        className="explaination_examlpe_timeline4",
+                                        className="explaination_examlpe_timeline",
                                         children=texts["Timeline4"]["graph_on_the_right"]["1_"]
                                     )
                                 ]

@@ -1,10 +1,54 @@
+.Period_Intro1{
+	margin:10px 100px;
+	width:50%;
+	margin:15px auto;
+}
+
+.Period_intro_content{
+	color:#000000;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:18px;
+}
+
+.Timeline_event_title{
+	color:#000000;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.Timeline_event_content{
+	color:#000000;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:18px;
+}
+
+.explaination_examlpe_timeline{
+	color:#000000;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:18px;
+	padding:10px 20px;
+	border:3px dashed #000000;
+}
+
+
+
+
+.Intro_title{
+	position:relative;
+	color:#000000;
+	top:15px;
+	margin-top:25px;
+	margin-bottom:40px;
+	text-transform: uppercase;
+	text-align:center;
+}
+
 .Timeline1 {
   position: relative;
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
   padding: 15px 0;
-    display:flex;
+  display:flex;
 }
 
 
@@ -59,7 +103,7 @@
 .Indice_Timeline1{
   padding: 15px 30px;
   position: relative;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   color: #006E51;
   text-transform: uppercase;
@@ -78,6 +122,7 @@
   border: 10px solid #006E51;
   border-radius: 26px ;
   z-index: 1;
+  font-size: 20px;
 }
 
 
@@ -94,7 +139,7 @@
   display: inline-block;
   top: calc(50% - 20px);
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   color: #006E51;
   text-transform: uppercase;
@@ -113,4 +158,5 @@
 
 .Timeline1_title{
 	text-align: center;
+	font-size:30px;
 }

@@ -144,5 +144,30 @@
 			"1_":"lot of lasers , lights speed, spaceship much more rectangle still always flying."
 		  
 		}
+	},
+	
+	"Classic_SF":{
+		"0_":"The beginning of the nineteenth century is marked by a major acceleration in the trends and characteristics of science fiction. This acceleration begins with the publication of Frankenstein in 1818.",
+		"1_":"Thanks to industrialization. This time is characterized by major evolutions in terms of means of transport, this is reflected in science fiction and particularly in the vision of spaceships and UFO.",
+		"2_":"During this period, many other writers wrote stories that contained many elements of science fiction, and numerous magazines were created.",
+		"3_":"In short, it was the eve of the explosion of science fiction works in the early 20th century."
+	},
+	
+	"Golden_age":{
+		"0_":"The period from 1930 to 1950 is called the golden age of science fiction. A large number of works of the genre were created, celebrating scientific achievements and progress.",
+		"1_":"In 1937, Astounding Stories magazines were published by John W. Campbell, which is a milestone of the golden age of SF. With this magazines, authors such as Isaac Asimov, Arthur C. Clarke and Robert A. Heinlein use their marvellous imagination consolidated and popularized the genre.",
+		"2_":"Since then, science fiction has had an increasing impact on society."
+	},
+	
+	"New_wave":{
+		"0_":"As the international situation changed, some science fiction writers began to question whether the progress of technology was really a benefit, while others expanded the landscape of their stories to include human civilization in a future society.",
+		"1_":"The former represents the genres that gave birth to anti-utopian and cyberpunk genres, and so on, and the latter, which created the space opera represented by Star Wars. But in any case, people are no longer as faithful as in the golden age to the development of technology.",
+		"2_":"We are particularly intreseted in space opera, because often in the story of this genre are full of many different types of spaceships or interstella travel machines."
+	},
+	
+	"Modern_age":{
+		"0_":"At the end of the 20th century, the science fiction fever had spread around the world and appeared in more and more different cultural media: movies, games, music, etc.",
+		"1_":"As a result of the Chernobyl incident and the Cold War, people began to respect some post-apocalyptic works, and horror stories represented by Cthulhu became a popular subject; at the same time, the rise of the Internet also made people nag at those prophecies made in the cyberpunk stories; and the development of special effects technology in movies also made more and more works from the golden age to be brought to the big screen ....",
+		"2_":"For John Clute, writer and literary critic of science fiction, science fiction of the beginning of the XXIst century can be understood in two ways. Either there is a vision of the triumph of science fiction as a genre that has depicted a meaningful future that in the process has passed, or there is an indecipherable and indiscernible vision of the world that the genre has tried to exaggerate and to which it has given importance."
 	}
 }

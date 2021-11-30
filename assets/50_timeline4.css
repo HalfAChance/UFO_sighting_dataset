@@ -1,3 +1,9 @@
+.Period_Intro4{
+	margin:10px 100px;
+	width:50%;
+	margin:15px auto;
+}
+
 .Timeline4 {
   position: relative;
   width: 100%;
@@ -71,13 +77,13 @@
 .Indice_Timeline4{
   padding: 15px 30px;
   position: relative;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   color: #006E51;
   text-transform: uppercase;
   letter-spacing: 1px;
   z-index: 1;
-  left:75%;
+  left:79%;
 }
 
 .Indice_Timeline4::after {
@@ -86,7 +92,7 @@
   width: 26px;
   height: 26px;
   top: calc(50% - 21px);
-  left:133px;
+  left:108px;
   background: #ffffff;
   border: 10px solid #006E51;
   border-radius: 26px ;
@@ -106,7 +112,7 @@
   top: calc(50% - 20px);
   right:30px;
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   color: #006E51;
   text-transform: uppercase;
@@ -116,4 +122,5 @@
 
 .Timeline4_title{
 	text-align: center;
+	font-size:30px;
 }
