@@ -7,9 +7,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import plotly.express as px
-from get_RaceBar import get_racebar
-from Graphes import get_map
-from Graphes import get_pies
+from Graphes import Graphess
 import json
 import psutil
 import os
@@ -19,12 +17,21 @@ with open("data/Texts.json","rb") as f:
     texts = json.loads(content)
     f.close()
 
+
+
 Shape_ = pd.read_csv("data/ShapesByYear.csv")
-fig_racebar = get_racebar(Shape_)
+#fig_racebar = get_racebar(Shape_)
 
 data = pd.read_csv("data/Cleaned_with_continent.csv")
-fig_map = get_map(data)
-fig_pie_list=get_pies(data)
+
+graphes = Graphess(data,Shape_)
+
+fig_map = graphes.get_map()
+fig_pie_list = graphes.get_pies()
+fig_racebar = graphes.get_racebar()
+
+#fig_map = get_map(data)
+#fig_pie_list=get_pies(data)
 
 
 app = dash.Dash(__name__)
