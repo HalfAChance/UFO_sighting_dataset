@@ -8,6 +8,8 @@
 	color:#000000;
 	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size:18px;
+	text-align:justify;
+	text-justify: inter-ideograph;
 }
 
 .Timeline_event_title{
@@ -154,6 +156,8 @@
 .Sticky_graph_Timeline1{
 	position:sticky;
 	top:0;
+	text-align:justify;
+	text-justify: inter-ideograph;
 }
 
 .Timeline1_title{

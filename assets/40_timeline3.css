@@ -115,6 +115,8 @@
 .Sticky_graph_Timeline3{
 	position:sticky;
 	top:0;
+	text-align:justify;
+	text-justify: inter-ideograph;
 }
 
 .Timeline3_title{

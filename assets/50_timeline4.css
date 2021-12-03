@@ -34,6 +34,8 @@
 .Sticky_graph_Timeline4{
 	position:sticky;
 	top:0;
+	text-align:justify;
+	text-justify: inter-ideograph;
 }
 
 

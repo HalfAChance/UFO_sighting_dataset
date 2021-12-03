@@ -35,6 +35,8 @@
 .Sticky_graph_Timeline2{
 	position:sticky;
 	top:0;
+	text-align:justify;
+	text-justify: inter-ideograph;
 }
 
 

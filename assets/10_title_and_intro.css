@@ -40,6 +40,8 @@
 	color:#F6F6F6;
 	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size:18px;
+	text-align:justify;
+	text-justify: inter-ideograph;
 }
 
 .Intro_graphe_board1{
