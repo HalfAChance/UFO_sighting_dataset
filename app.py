@@ -1,6 +1,8 @@
 import dash
 import dash_core_components as dcc
+#from dash import dcc
 import dash_html_components as html
+#from dash import html
 import pandas as pd
 import numpy as np
 import matplotlib as mpl
@@ -52,7 +54,7 @@ app.layout = html.Div(className="Body",children = [
                 className="Intro_text_board",
                 children=[
                     html.H3(children="-----------------------------------------------------------------", className="Intro_title1"),
-                    html.P(children=texts["Intro"]["1_"], className="Intro_content")
+                    html.P(children=texts["Intro"]["1_"], className="Intro_content", style={'textAlign': 'justify'})
                 ]
             ),
             html.Div(
@@ -68,10 +70,10 @@ app.layout = html.Div(className="Body",children = [
                 className="Intro_text_board",
                 children = [
                     #html.H3(children="This is Introduction",className="Intro_title2"),
-                    html.P(children=texts["Intro"]["2_"],className="Intro_content"),
-                    html.P(children=texts["Intro"]["3_"], className="Intro_content"),
+                    html.P(children=texts["Intro"]["2_"],className="Intro_content", style={'textAlign': 'justify'}),
+                    html.P(children=texts["Intro"]["3_"], className="Intro_content", style={'textAlign': 'justify'}),
                     html.H3(children="-----------------------------------------------------------------", className="Intro_title1"),
-                    html.P(children=texts["Intro"]["4_"], className="Intro_content")
+                    html.P(children=texts["Intro"]["4_"], className="Intro_content", style={'textAlign': 'justify'})
                 ]
             ),
             html.Div(
@@ -87,9 +89,9 @@ app.layout = html.Div(className="Body",children = [
                 className="Intro_text_board",
                 children=[
                     # html.H3(children="This is Introduction",className="Intro_title2"),
-                    html.P(children=texts["Intro"]["5_"], className="Intro_content"),
-                    html.P(children=texts["Intro"]["6_"], className="Intro_content"),
-                    html.P(children=texts["Intro"]["7_"], className="Intro_content")
+                    html.P(children=texts["Intro"]["5_"], className="Intro_content", style={'textAlign': 'justify'}),
+                    html.P(children=texts["Intro"]["6_"], className="Intro_content", style={'textAlign': 'justify'}),
+                    html.P(children=texts["Intro"]["7_"], className="Intro_content", style={'textAlign': 'justify'})
                 ]
             ),
             html.Div(
@@ -125,10 +127,10 @@ app.layout = html.Div(className="Body",children = [
                 className="Period_Intro1",
                 children=[
                     html.H3(children="-----------------------------------------------------------------", className="Intro_title"),
-                    html.P(children=texts["Classic_SF"]["0_"], className="Period_intro_content"),
-                    html.P(children=texts["Classic_SF"]["1_"], className="Period_intro_content"),
-                    html.P(children=texts["Classic_SF"]["2_"], className="Period_intro_content"),
-                    html.P(children=texts["Classic_SF"]["3_"], className="Period_intro_content"),
+                    html.P(children=texts["Classic_SF"]["0_"], className="Period_intro_content", style={'textAlign': 'justify'}),
+                    html.P(children=texts["Classic_SF"]["1_"], className="Period_intro_content", style={'textAlign': 'justify'}),
+                    html.P(children=texts["Classic_SF"]["2_"], className="Period_intro_content", style={'textAlign': 'justify'}),
+                    html.P(children=texts["Classic_SF"]["3_"], className="Period_intro_content", style={'textAlign': 'justify'}),
                     html.H3(children="-----------------------------------------------------------------",
                             className="Intro_title"),
                 ]
@@ -169,10 +171,10 @@ app.layout = html.Div(className="Body",children = [
                                                 width="150px"
                                             ),
                                             html.H2(children=texts["Timeline1"]["(1898)"]["0_"],
-                                                    className="Timeline_event_title"),
+                                                    className="Timeline_event_title", style={'textAlign': 'justify'}),
                                             html.P(
                                                 children=texts["Timeline1"]["(1898)"]["1_"],
-                                                className="Timeline_event_content")
+                                                className="Timeline_event_content", style={'textAlign': 'justify'})
                                         ]
                                     ),
                                     html.Div(
@@ -198,10 +200,10 @@ app.layout = html.Div(className="Body",children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline1"]["(1902)"]["0_"],
-                                                    className="Timeline_event_title"),
+                                                    className="Timeline_event_title", style={'textAlign': 'justify'}),
                                             html.P(
                                                 children=texts["Timeline1"]["(1902)"]["1_"],
-                                                className="Timeline_event_content")
+                                                className="Timeline_event_content", style={'textAlign': 'justify'})
                                         ]
                                     ),
                                     html.Div(
@@ -223,10 +225,10 @@ app.layout = html.Div(className="Body",children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline1"]["(1910)"]["0_"],
-                                                    className="Timeline_event_title"),
+                                                    className="Timeline_event_title", style={'textAlign': 'justify'}),
                                             html.P(
                                                 children=texts["Timeline1"]["(1910)"]["1_"],
-                                                className="Timeline_event_content")
+                                                className="Timeline_event_content", style={'textAlign': 'justify'})
                                         ]
                                     ),
                                     html.Div(
@@ -247,10 +249,10 @@ app.layout = html.Div(className="Body",children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline1"]["(1922)"]["0_"],
-                                                    className="Timeline_event_title"),
+                                                    className="Timeline_event_title", style={'textAlign': 'justify'}),
                                             html.P(
                                                 children=texts["Timeline1"]["(1922)"]["1_"],
-                                                className="Timeline_event_content")
+                                                className="Timeline_event_content", style={'textAlign': 'justify'})
                                         ]
                                     ),
                                     html.Div(
@@ -285,9 +287,9 @@ app.layout = html.Div(className="Body",children = [
                 children=[
                     html.H3(children="-----------------------------------------------------------------",
                             className="Intro_title"),
-                    html.P(children=texts["Golden_age"]["0_"], className="Period_intro_content"),
-                    html.P(children=texts["Golden_age"]["1_"], className="Period_intro_content"),
-                    html.P(children=texts["Golden_age"]["2_"], className="Period_intro_content"),
+                    html.P(children=texts["Golden_age"]["0_"], className="Period_intro_content", style={'textAlign': 'justify'}),
+                    html.P(children=texts["Golden_age"]["1_"], className="Period_intro_content", style={'textAlign': 'justify'}),
+                    html.P(children=texts["Golden_age"]["2_"], className="Period_intro_content", style={'textAlign': 'justify'}),
                     html.H3(children="-----------------------------------------------------------------",
                             className="Intro_title"),
                 ]
@@ -314,10 +316,10 @@ app.layout = html.Div(className="Body",children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline2"]["(1951)"]["0_"],
-                                                    className="Timeline_event_title"),
+                                                    className="Timeline_event_title", style={'textAlign': 'justify'}),
                                             html.P(
                                                 children=texts["Timeline2"]["(1951)"]["1_"],
-                                                className="Timeline_event_content")
+                                                className="Timeline_event_content", style={'textAlign': 'justify'})
                                         ]
                                     ),
                                     html.Div(
@@ -339,10 +341,10 @@ app.layout = html.Div(className="Body",children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline2"]["(1953)"]["0_"],
-                                                    className="Timeline_event_title"),
+                                                    className="Timeline_event_title", style={'textAlign': 'justify'}),
                                             html.P(
                                                 children=texts["Timeline2"]["(1953)"]["1_"],
-                                                className="Timeline_event_content")
+                                                className="Timeline_event_content", style={'textAlign': 'justify'})
                                         ]
                                     ),
                                     html.Div(
@@ -364,10 +366,10 @@ app.layout = html.Div(className="Body",children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline2"]["(1958)"]["0_"],
-                                                    className="Timeline_event_title"),
+                                                    className="Timeline_event_title", style={'textAlign': 'justify'}),
                                             html.P(
                                                 children=texts["Timeline2"]["(1958)"]["1_"],
-                                                className="Timeline_event_content")
+                                                className="Timeline_event_content", style={'textAlign': 'justify'})
                                         ]
                                     ),
                                     html.Div(
@@ -420,9 +422,9 @@ app.layout = html.Div(className="Body",children = [
                 children=[
                     html.H3(children="-----------------------------------------------------------------",
                             className="Intro_title"),
-                    html.P(children=texts["New_wave"]["0_"], className="Period_intro_content"),
-                    html.P(children=texts["New_wave"]["1_"], className="Period_intro_content"),
-                    html.P(children=texts["New_wave"]["2_"], className="Period_intro_content"),
+                    html.P(children=texts["New_wave"]["0_"], className="Period_intro_content", style={'textAlign': 'justify'}),
+                    html.P(children=texts["New_wave"]["1_"], className="Period_intro_content", style={'textAlign': 'justify'}),
+                    html.P(children=texts["New_wave"]["2_"], className="Period_intro_content", style={'textAlign': 'justify'}),
                     html.H3(children="-----------------------------------------------------------------",
                             className="Intro_title"),
                 ]
@@ -467,10 +469,10 @@ app.layout = html.Div(className="Body",children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline3"]["(1968)"]["0_"],
-                                                    className="Timeline_event_title"),
+                                                    className="Timeline_event_title", style={'textAlign': 'justify'}),
                                             html.P(
                                                 children=texts["Timeline3"]["(1968)"]["1_"],
-                                                className="Timeline_event_content")
+                                                className="Timeline_event_content", style={'textAlign': 'justify'})
                                         ]
                                     ),
                                     html.Div(
@@ -492,10 +494,10 @@ app.layout = html.Div(className="Body",children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline3"]["(1977)"]["0_"],
-                                                    className="Timeline_event_title"),
+                                                    className="Timeline_event_title", style={'textAlign': 'justify'}),
                                             html.P(
                                                 children=texts["Timeline3"]["(1977)"]["1_"],
-                                                className="Timeline_event_content")
+                                                className="Timeline_event_content", style={'textAlign': 'justify'})
                                         ]
                                     ),
                                     html.Div(
@@ -517,10 +519,10 @@ app.layout = html.Div(className="Body",children = [
                                                 width="150px"
                                             ),
                                             html.H2(children=texts["Timeline3"]["(1977)_"]["0_"],
-                                                    className="Timeline_event_title"),
+                                                    className="Timeline_event_title", style={'textAlign': 'justify'}),
                                             html.P(
                                                 children=texts["Timeline3"]["(1977)_"]["1_"],
-                                                className="Timeline_event_content")
+                                                className="Timeline_event_content", style={'textAlign': 'justify'})
                                         ]
                                     ),
                                     html.Div(
@@ -542,10 +544,10 @@ app.layout = html.Div(className="Body",children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline3"]["(1986)"]["0_"],
-                                                    className="Timeline_event_title"),
+                                                    className="Timeline_event_title", style={'textAlign': 'justify'}),
                                             html.P(
                                                 children=texts["Timeline3"]["(1986)"]["1_"],
-                                                className="Timeline_event_content")
+                                                className="Timeline_event_content", style={'textAlign': 'justify'})
                                         ]
                                     ),
                                     html.Div(
@@ -579,9 +581,9 @@ app.layout = html.Div(className="Body",children = [
                 children=[
                     html.H3(children="-----------------------------------------------------------------",
                             className="Intro_title"),
-                    html.P(children=texts["Modern_age"]["0_"], className="Period_intro_content"),
-                    html.P(children=texts["Modern_age"]["1_"], className="Period_intro_content"),
-                    html.P(children=texts["Modern_age"]["2_"], className="Period_intro_content"),
+                    html.P(children=texts["Modern_age"]["0_"], className="Period_intro_content", style={'textAlign': 'justify'}),
+                    html.P(children=texts["Modern_age"]["1_"], className="Period_intro_content", style={'textAlign': 'justify'}),
+                    html.P(children=texts["Modern_age"]["2_"], className="Period_intro_content", style={'textAlign': 'justify'}),
                     html.H3(children="-----------------------------------------------------------------",
                             className="Intro_title"),
                 ]
@@ -608,10 +610,10 @@ app.layout = html.Div(className="Body",children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline4"]["(1997)"]["0_"],
-                                                    className="Timeline_event_title"),
+                                                    className="Timeline_event_title", style={'textAlign': 'justify'}),
                                             html.P(
                                                 children=texts["Timeline4"]["(1997)"]["1_"],
-                                                className="Timeline_event_content")
+                                                className="Timeline_event_content", style={'textAlign': 'justify'})
                                         ]
                                     ),
                                     html.Div(
@@ -633,10 +635,10 @@ app.layout = html.Div(className="Body",children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline4"]["(2005)"]["0_"],
-                                                    className="Timeline_event_title"),
+                                                    className="Timeline_event_title", style={'textAlign': 'justify'}),
                                             html.P(
                                                 children=texts["Timeline4"]["(2005)"]["1_"],
-                                                className="Timeline_event_content")
+                                                className="Timeline_event_content", style={'textAlign': 'justify'})
                                         ]
                                     ),
                                     html.Div(
@@ -658,10 +660,10 @@ app.layout = html.Div(className="Body",children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline4"]["(2011)"]["0_"],
-                                                    className="Timeline_event_title"),
+                                                    className="Timeline_event_title", style={'textAlign': 'justify'}),
                                             html.P(
                                                 children=texts["Timeline4"]["(2011)"]["1_"],
-                                                className="Timeline_event_content")
+                                                className="Timeline_event_content", style={'textAlign': 'justify'})
                                         ]
                                     ),
                                     html.Div(
@@ -683,10 +685,10 @@ app.layout = html.Div(className="Body",children = [
                                                 width="250px"
                                             ),
                                             html.H2(children=texts["Timeline4"]["(2014)"]["0_"],
-                                                    className="Timeline_event_title"),
+                                                    className="Timeline_event_title", style={'textAlign': 'justify'}),
                                             html.P(
                                                 children=texts["Timeline4"]["(2014)"]["1_"],
-                                                className="Timeline_event_content")
+                                                className="Timeline_event_content", style={'textAlign': 'justify'})
                                         ]
                                     ),
                                     html.Div(
@@ -713,7 +715,8 @@ app.layout = html.Div(className="Body",children = [
                                     ),
                                     html.P(
                                         className="explaination_examlpe_timeline",
-                                        children=texts["Timeline4"]["graph_on_the_right"]["1_"]
+                                        children=texts["Timeline4"]["graph_on_the_right"]["1_"],
+                                        style={'textAlign': 'justify'}
                                     )
                                 ]
                             )
