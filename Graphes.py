@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 import plotly.express as px
-
+import re
 
 def define_period(value):
     if value <= 1938:
@@ -33,6 +33,13 @@ def find_percentage(df, notfirst=False):
     df.sort_values("%", inplace=True, ascending=False)
     return df
 
+def change_duration(value):
+  value = str(value)
+  value = float(re.findall(r"\d+",value)[0])
+  if value > 3600:
+    return 3600
+  else:
+    return value
 
 
 class Graphess():
@@ -42,17 +49,14 @@ class Graphess():
         self.df_bar = df_bar
 
     def get_map(self):
-        self.df_clean["Observed time"] = self.df_clean["Hour"].where(self.df_clean["Hour"].between(8, 19), "Observed in night")
-        self.df_clean["Observed time"] = self.df_clean["Observed time"].mask(self.df_clean["Observed time"] != "Observed in night", "Observed in day")
-        fig = px.scatter_mapbox(self.df_clean, lat="latitude", lon="longitude ", hover_name="city",
-                                hover_data=["Time_clean", "latitude", "longitude ", "shape"]
-                                , color="Observed time", color_discrete_sequence=["#F3C623", "#10375C"], zoom=1,
-                                center={"lat": 35.74, "lon": -39.46})
+        self.df_clean["duration (seconds)"] = self.df_clean["duration (seconds)"].apply(change_duration)
+        fig = go.Figure(go.Densitymapbox(lat=self.df_clean["latitude"], lon=self.df_clean["longitude "], z=self.df_clean["duration (seconds)"], radius=6,
+                                         colorscale="Cividis",opacity=0.8,
+                                         hovertemplate="lon: %{lon}<br>lat: %{lat}<br>Sighting duration: %{z}s<extra></extra>",colorbar={"title":"Sighting duration<br>(seconds)"}))
         fig.update_layout(mapbox_style="open-street-map")
-        fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0}
-                          , title={"text": "<b>UFO sightings from 1906 to 2014</b>", "xanchor": "center",
-                                   "yanchor": "top", "x": 0.5, "y": 0.9}
-                          , height=500, width=800, legend=dict(x=0, y=0.2, traceorder="normal"))
+        fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0},width=900, height=500,
+                          title={"text": "<b>Duration and distruibution of UFO sighting since 1906</b>",
+                                 "xanchor": "center", "yanchor": "top", "x": 0.5, "y": 0.9}, legend=dict(x=0,y=.5,traceorder="normal"))
         return fig
 
     def get_pies(self):
@@ -107,7 +111,7 @@ class Graphess():
         for i in df_P1_study["shape"].values:
             color_P1.append(self.color_indexes[i])
 
-        fig1 = go.Figure(data=[go.Pie(labels=df_P1_study["shape"], values=df_P1_study["city"], textinfo="label+percent",
+        fig1 = go.Figure(data=[go.Pie(labels=df_P1_study["shape"], values=df_P1_study["city"], textinfo="label+percent",hovertemplate="<b>%{label}</b><br>Total counts: %{value}<br><extra></extra>",
                                       marker=dict(colors=color_P1), pull=[0.1])])
         fig1.update_layout(margin=dict(t=60, b=0, l=0, r=0), height=500, width=610,
                            title={"text": "<b>Distribution of UFO's shape in sighting during 1906-1938</b>",
@@ -143,7 +147,7 @@ class Graphess():
             marker=dict(
                 colors=color_P2,
             ),
-            hovertemplate="<b>%{label}</b><br>Total counts: %{value}<br>",
+            hovertemplate="<b>%{label}</b><br>Total counts: %{value}<br><extra></extra>",
         ))
         fig2.update_layout(margin=dict(t=60, b=0, l=0, r=0), height=500, width=610,
                            title={"text": "<b>Distribution of UFO's shape in sighting during 1938-1970</b>",
@@ -179,7 +183,7 @@ class Graphess():
             marker=dict(
                 colors=color_P3,
             ),
-            hovertemplate="<b>%{label}</b><br>Total counts: %{value}<br>",
+            hovertemplate="<b>%{label}</b><br>Total counts: %{value}<br><extra></extra>",
         ))
         fig3.update_layout(margin=dict(t=60, b=0, l=0, r=0), height=500, width=610,
                            title={"text": "<b>Distribution of UFO's shape in sighting during 1970-1996</b>",
@@ -215,7 +219,7 @@ class Graphess():
             marker=dict(
                 colors=color_P4,
             ),
-            hovertemplate="<b>%{label}</b><br>Total counts: %{value}<br>",
+            hovertemplate="<b>%{label}</b><br>Total counts: %{value}<br><extra></extra>",
         ))
         fig4.update_layout(margin=dict(t=60, b=0, l=0, r=0), height=500, width=610,
                            title={"text": "<b>Distribution of UFO's shape in sighting during 1996-now</b>",
@@ -271,7 +275,7 @@ class Graphess():
 
         # Layout part:
         layout1 = go.Layout(width=800, height=500,
-                            title="<b>The evolution of the shapes of UFO in the comment of sighting</b>",
+                            title={"text":"<b>The evolution of the shapes of UFO in the comment of sighting</b>","xanchor": "center", "yanchor": "top", "x": 0.5, "y": 0.9},
                             hovermode="closest",
                             xaxis=dict(range=[0, 1]),
                             updatemenus=[dict(type="buttons",
@@ -285,7 +289,7 @@ class Graphess():
                                               direction="left",
                                               showactive=False,
                                               x=0,
-                                              y=-0.1,
+                                              y=-0.2,
                                               xanchor="right",
                                               yanchor="top")])
 
@@ -306,7 +310,7 @@ class Graphess():
             "pad": {"b": 10, "t": 50},
             "len": 0.9,
             "x": 0.1,
-            "y": 0,
+            "y": 0.1,
             "steps": []
         }
 

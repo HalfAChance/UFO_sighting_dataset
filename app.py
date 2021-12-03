@@ -37,7 +37,7 @@ fig_racebar = graphes.get_racebar()
 app = dash.Dash(__name__)
 server = app.server
 
-app.layout = html.Div(children = [
+app.layout = html.Div(className="Body",children = [
     html.Div(
         children=[
             html.H1(children="Peek the impact of Science Fiction through the sight of UFO",className="Title"),
