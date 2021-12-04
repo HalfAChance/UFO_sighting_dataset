@@ -41,8 +41,22 @@ server = app.server
 app.layout = html.Div(className="Body",children = [
     html.Div(
         children=[
+            html.Div(
+                className="Bar",
+                children=[
+                    html.H3(children="-----------------------------------------------------------------",
+                            className="Bar_"),
+                ]
+            ),
             html.H1(children="Peek the impact of Science Fiction through the sight of UFO",className="Title"),
-            html.H2(children="Present by Tianyuan ZHANG and Adrien VILLEMIN",className = "Names")
+            html.H2(children="Present by Tianyuan ZHANG and Adrien VILLEMIN",className = "Names"),
+            html.Div(
+                className="Bar",
+                children=[
+                    html.H3(children="-----------------------------------------------------------------",
+                            className="Bar_"),
+                ]
+            ),
         ],
         className="Title_board"
     ),
@@ -50,7 +64,7 @@ app.layout = html.Div(className="Body",children = [
         className="Intro_board",
         children = [
             html.Div(
-                className="Intro_text_board",
+                className="Bar",
                 children=[
                     html.H3(children="-----------------------------------------------------------------", className="Intro_title1"),
                 ]
@@ -111,18 +125,15 @@ app.layout = html.Div(className="Body",children = [
             html.Div(
                 className="End_intro",
                 children=[
-                    html.P(
+                    html.H3(
                         children="-----------------------------------------------------------------"
                     ),
-                    html.P(
+                    html.H3(
                         children="---------------------------------------------------"
                     ),
-                    html.P(
+                    html.H3(
                         children="------------------------------------------"
                     ),
-                    html.P(
-                        children="-",className="End_invisible"
-                    )
 
                 ]
             )
@@ -737,6 +748,53 @@ app.layout = html.Div(className="Body",children = [
                     ),
                 ]
             )
+        ]
+    ),
+    html.Div(
+        className = "Intro_board",
+        children=[
+            html.Div(
+                className="Intro_text_board",
+                children=[
+                    html.Div(
+                        className="Bar",
+                        children=[
+                            html.H3(children="-----------------------------------------------------------------",
+                                    className="Bar_"),
+                        ]
+                    ),
+                    html.H2(children="Conclusion", className="Title"),
+                    html.Div(
+                        className="Bar",
+                        children=[
+                            html.H3(children="-----------------------------------------------------------------",
+                                    className="Bar_"),
+                        ]
+                    ),
+                    html.P(children=texts["Conclusion"]["0_"], className="Intro_content"),
+                    html.P(children=texts["Conclusion"]["1_"], className="Intro_content"),
+                    html.P(children=texts["Conclusion"]["2_"], className="Intro_content"),
+                    html.P(children=texts["Conclusion"]["3_"], className="Intro_content"),
+                    html.P(children=texts["Conclusion"]["4_"], className="Intro_content"),
+                    html.P(children=texts["Conclusion"]["5_"], className="Intro_content"),
+                    html.P(children=texts["Conclusion"]["6_"], className="Intro_content"),
+                    html.Div(
+                        className="End_intro",
+                        children=[
+                            html.H3(
+                                children="-----------------------------------------------------------------"
+                            ),
+                            html.H3(
+                                children="---------------------------------------------------"
+                            ),
+                            html.H3(
+                                children="------------------------------------------"
+                            ),
+
+                        ]
+                    )
+                ]
+            ),
         ]
     ),
 

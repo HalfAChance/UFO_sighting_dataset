@@ -1,5 +1,6 @@
 .Title_board{
 	background-color:#212121;
+	border:15px solid #212121;
 }
 .Title{
 	text-align:center;
@@ -73,14 +74,15 @@
 .End_intro{
 	position:relative;
 	color:#F6F6F6;
-	top:15px;
-	margin-top:25px;
-	margin-bottom:40px;
 	text-transform: uppercase;
 	text-align:center;
+	padding-bottom:10px;
 	
 }
 
-.End_invisible{
-	color:#212121;
+
+.Bar{
+	color:#F6F6F6;
+	text-align:center;
+	text-transform: uppercase;
 }

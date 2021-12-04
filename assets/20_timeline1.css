@@ -76,6 +76,8 @@
 .Container_timeline_right{
   padding: 15px 30px;
   position: relative;
+  text-align:justify;
+  text-justify: inter-ideograph;
 }
 
 .Container_timeline_right::after {
