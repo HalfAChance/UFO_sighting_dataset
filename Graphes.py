@@ -289,7 +289,7 @@ class Graphess():
 
         # Layout part:
         layout1 = go.Layout(width=800, height=500,plot_bgcolor="#A7BBC7",
-                            title={"text":"<b>The evolution of the shapes of UFO in the comment of sighting</b>","xanchor": "center", "yanchor": "top", "x": 0.5, "y": 0.9,"font":{"color":"#212121","size":20,"family":"Trebuchet MS"}},
+                            title={"text":"<b>The evolution of UFO's shape</b>","xanchor": "center", "yanchor": "top", "x": 0.5, "y": 0.9,"font":{"color":"#212121","size":20,"family":"Trebuchet MS"}},
                             hovermode="closest",
                             xaxis=dict(range=[0, 1]),
                             updatemenus=[dict(type="buttons",
