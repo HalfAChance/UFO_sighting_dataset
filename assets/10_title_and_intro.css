@@ -52,6 +52,14 @@
 	display:block;
 }
 
+.Intro_graphe_board0{
+	max-height:1000px;
+	max-width:1200px;
+	width:50%;
+	margin:auto;
+	display:block;
+}
+
 
 
 .Intro_graphe_board2{
@@ -63,8 +71,13 @@
 }
 
 .End_intro{
-	text-align:center;
+	position:relative;
 	color:#F6F6F6;
+	top:15px;
+	margin-top:25px;
+	margin-bottom:40px;
+	text-transform: uppercase;
+	text-align:center;
 	
 }
 

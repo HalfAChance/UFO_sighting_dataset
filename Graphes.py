@@ -43,10 +43,11 @@ def change_duration(value):
 
 
 class Graphess():
-    def __init__(self,df_clean,df_bar):
+    def __init__(self,df_clean,df_bar,df_movies):
         self.df_clean = df_clean
         self.color_indexes={}
         self.df_bar = df_bar
+        self.df_movies = df_movies
 
     def get_map(self):
         self.df_clean["duration (seconds)"] = self.df_clean["duration (seconds)"].apply(change_duration)
@@ -55,9 +56,22 @@ class Graphess():
                                          hovertemplate="lon: %{lon}<br>lat: %{lat}<br>Sighting duration: %{z}s<extra></extra>",colorbar={"title":"Sighting duration<br>(seconds)"}))
         fig.update_layout(mapbox_style="open-street-map")
         fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0},width=900, height=500,
-                          title={"text": "<b>Duration and distruibution of UFO sighting since 1906</b>",
-                                 "xanchor": "center", "yanchor": "top", "x": 0.5, "y": 0.9}, legend=dict(x=0,y=.5,traceorder="normal"))
-        return fig
+                          title={"text": "<b>Duration of UFO sighting since 1906</b>",
+                                 "xanchor": "center", "yanchor": "top", "x": 0.5, "y": 0.9,"font":{"color":"#212121","size":20,"family":"Trebuchet MS"}}, legend=dict(x=0,y=.5,traceorder="normal"))
+
+        df_info_c = self.df_movies.groupby(["iso3", "continent", "country_first"]).count()["title"]
+        df_info_c = df_info_c.reset_index(drop=False)
+        df_info_c.columns = ["iso3", "continent", "country_first", "Sci-Fi films"]
+
+        fig_ = px.scatter_geo(df_info_c, locations="iso3", color="continent", size="Sci-Fi films", size_max=100,
+                             hover_name="country_first", hover_data={"iso3": False, "continent": False},
+                             projection="natural earth")
+        fig_.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0}, width=900, height=500,
+                          title={"text": "<b>Sci-Fi movies since 1906</b>",
+                                 "xanchor": "center", "yanchor": "top", "x": 0.5, "y": 0.9,"font":{"color":"#212121","size":20,"family":"Trebuchet MS"}},
+                          legend=dict(x=0, y=.5, traceorder="normal"))
+
+        return [fig,fig_]
 
     def get_pies(self):
         # Preprocessing:
@@ -115,7 +129,7 @@ class Graphess():
                                       marker=dict(colors=color_P1), pull=[0.1])])
         fig1.update_layout(margin=dict(t=60, b=0, l=0, r=0), height=500, width=610,
                            title={"text": "<b>Distribution of UFO's shape in sighting during 1906-1938</b>",
-                                  "xanchor": "center", "yanchor": "top", "x": 0.5, "y": 0.9}, showlegend=False)
+                                  "xanchor": "center", "yanchor": "top", "x": 0.5, "y": 0.9,"font":{"color":"#212121","size":20,"family":"Trebuchet MS"}}, showlegend=False)
 
         # sunburst2
         total2 = df_P2_study["city"].sum()
@@ -151,7 +165,7 @@ class Graphess():
         ))
         fig2.update_layout(margin=dict(t=60, b=0, l=0, r=0), height=500, width=610,
                            title={"text": "<b>Distribution of UFO's shape in sighting during 1938-1970</b>",
-                                  "xanchor": "center", "yanchor": "top", "x": 0.5, "y": 0.95}, showlegend=False)
+                                  "xanchor": "center", "yanchor": "top", "x": 0.5, "y": 0.95,"font":{"color":"#212121","size":20,"family":"Trebuchet MS"}}, showlegend=False)
 
         # Sunburst3
         total3 = df_P3_study["city"].sum()
@@ -187,7 +201,7 @@ class Graphess():
         ))
         fig3.update_layout(margin=dict(t=60, b=0, l=0, r=0), height=500, width=610,
                            title={"text": "<b>Distribution of UFO's shape in sighting during 1970-1996</b>",
-                                  "xanchor": "center", "yanchor": "top", "x": 0.5, "y": 0.95}, showlegend=False)
+                                  "xanchor": "center", "yanchor": "top", "x": 0.5, "y": 0.95,"font":{"color":"#212121","size":20,"family":"Trebuchet MS"}}, showlegend=False)
 
         # sunburst4
         total4 = df_P4_study["city"].sum()
@@ -223,7 +237,7 @@ class Graphess():
         ))
         fig4.update_layout(margin=dict(t=60, b=0, l=0, r=0), height=500, width=610,
                            title={"text": "<b>Distribution of UFO's shape in sighting during 1996-now</b>",
-                                  "xanchor": "center", "yanchor": "top", "x": 0.5, "y": 0.95}, showlegend=False)
+                                  "xanchor": "center", "yanchor": "top", "x": 0.5, "y": 0.95,"font":{"color":"#212121","size":20,"family":"Trebuchet MS"}}, showlegend=False)
 
         return [fig1, fig2, fig3, fig4]
 
@@ -274,8 +288,8 @@ class Graphess():
         trace0.append(trace)
 
         # Layout part:
-        layout1 = go.Layout(width=800, height=500,
-                            title={"text":"<b>The evolution of the shapes of UFO in the comment of sighting</b>","xanchor": "center", "yanchor": "top", "x": 0.5, "y": 0.9},
+        layout1 = go.Layout(width=800, height=500,plot_bgcolor="#A7BBC7",
+                            title={"text":"<b>The evolution of the shapes of UFO in the comment of sighting</b>","xanchor": "center", "yanchor": "top", "x": 0.5, "y": 0.9,"font":{"color":"#212121","size":20,"family":"Trebuchet MS"}},
                             hovermode="closest",
                             xaxis=dict(range=[0, 1]),
                             updatemenus=[dict(type="buttons",
@@ -336,7 +350,7 @@ class Graphess():
             annotation = []
             for x_, y_ in zip(x_data, y_data):
                 annotation.append(dict(xref="x", yref="y", y=y_, x=x_ / 2, text=str(int(x_)),
-                                       font=dict(family="Arial", color="rgb(255,255,255)"), showarrow=False))
+                                       font=dict(family="Arial", color="#F3F1F5"), showarrow=False))
 
             size = np.max(x_data)
 

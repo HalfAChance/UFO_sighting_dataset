@@ -23,10 +23,11 @@ Shape_ = pd.read_csv("data/ShapesByYear.csv")
 #fig_racebar = get_racebar(Shape_)
 
 data = pd.read_csv("data/Cleaned_with_continent.csv")
+movies = pd.read_csv("data/movies.csv")
 
-graphes = Graphess(data,Shape_)
+graphes = Graphess(data,Shape_,movies)
 
-fig_map = graphes.get_map()
+fig_map_list = graphes.get_map()
 fig_pie_list = graphes.get_pies()
 fig_racebar = graphes.get_racebar()
 
@@ -52,7 +53,6 @@ app.layout = html.Div(className="Body",children = [
                 className="Intro_text_board",
                 children=[
                     html.H3(children="-----------------------------------------------------------------", className="Intro_title1"),
-                    html.P(children=texts["Intro"]["1_"], className="Intro_content")
                 ]
             ),
             html.Div(
@@ -60,7 +60,23 @@ app.layout = html.Div(className="Body",children = [
                 children=[
                     dcc.Graph(
                         id="graphe_intro1",
-                        figure=fig_map
+                        figure=fig_map_list[0]
+                    )
+                ]
+            ),
+            html.Div(
+                className="Intro_text_board",
+                children=[
+
+                    html.P(children=texts["Intro"]["1_"], className="Intro_content")
+                ]
+            ),
+            html.Div(
+                className="Intro_graphe_board0",
+                children=[
+                    dcc.Graph(
+                        id="graphe_intro0",
+                        figure=fig_map_list[1]
                     )
                 ]
             ),
